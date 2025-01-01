@@ -1,5 +1,8 @@
 import { notFound } from "next/navigation";
 
+const getRandomInt = (count: number) => {
+    return Math.floor(Math.random() * count);
+}
 const ReviewsDetails = async ({ params }: {
     params: {
         productId: string,
@@ -7,6 +10,10 @@ const ReviewsDetails = async ({ params }: {
     }
 }) => {
     const { reviewId, productId } = await params;
+    const random = getRandomInt(2);
+    if (random === 1) {
+        // throw new Error('Server Error');
+    }
     if (parseInt(reviewId) > 1000) {
         notFound();
     }
