@@ -10,7 +10,7 @@ const ReviewsDetails = async ({ params }: {
     }
 }) => {
     const { reviewId, productId } = await params;
-    const random = getRandomInt(2);
+    const random = getRandomInt(10);
     if (random === 1) {
         // throw new Error('Server Error');
     }
