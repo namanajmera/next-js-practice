@@ -1,13 +1,14 @@
 import React from 'react'
 
-const ProductDetails = ({ params }: {
+const ProductDetails = async ({ params }: {
     params: {
         productId: string
     }
 }) => {
+    const {productId} = await params;
     return (
-        <div>ProductDetails of {params.productId}</div>
+        <div>ProductDetails of {productId}</div>
     )
 }
 
-export default ProductDetails
+export default ProductDetails;
